@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Método Financeiro 3-2-1 — O Plano para Sair das Dívidas</title>
+
+<meta name="description" content="Método Financeiro 3-2-1 para organizar suas finanças, negociar dívidas e criar uma rotina para acelerar sua quitação.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7f8;
+  color:#17202a;
+  line-height:1.6;
+}
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+.hero{
+  background:linear-gradient(135deg,#071f18,#0b3d2e);
+  color:white;
+  padding:70px 20px;
+  text-align:center;
+}
+
+.badge{
+  display:inline-block;
+  background:#d7ff4f;
+  color:#142000;
+  padding:8px 18px;
+  border-radius:30px;
+  font-weight:bold;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-size:clamp(34px,6vw,58px);
+  line-height:1.08;
+  max-width:900px;
+  margin:auto;
+}
+
+.hero p{
+  max-width:760px;
+  margin:22px auto;
+  font-size:20px;
+  color:#e8eeee;
+}
+
+.cta{
+  display:inline-block;
+  background:#d7ff4f;
+  color:#132000;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:bold;
+  padding:18px 32px;
+  border-radius:12px;
+  margin-top:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.cta:hover{
+  transform:translateY(-2px);
+}
+
+section{
+  padding:65px 20px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:15px;
+  color:#0b3d2e;
+}
+
+.section-subtitle{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 40px;
+  color:#58636b;
+  font-size:18px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:white;
+  border-radius:18px;
+  padding:30px;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.card h3{
+  color:#0b3d2e;
+  margin-bottom:12px;
+  font-size:22px;
+}
+
+.number{
+  font-size:42px;
+  font-weight:bold;
+  color:#9bbf00;
+  margin-bottom:8px;
+}
+
+.highlight{
+  background:#0b3d2e;
+  color:white;
+}
+
+.highlight h3{
+  color:#d7ff4f;
+}
+
+.formats{
+  background:#ffffff;
+}
+
+.format{
+  border-left:5px solid #d7ff4f;
+}
+
+.steps{
+  background:#eef3f0;
+}
+
+.step{
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+  margin-bottom:22px;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+}
+
+.step-number{
+  min-width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#0b3d2e;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.offer{
+  background:linear-gradient(135deg,#0b3d2e,#06271d);
+  color:white;
+  text-align:center;
+}
+
+.price{
+  font-size:56px;
+  font-weight:bold;
+  color:#d7ff4f;
+  margin:15px 0;
+}
+
+.offer ul{
+  list-style:none;
+  max-width:600px;
+  margin:30px auto;
+  text-align:left;
+}
+
+.offer li{
+  margin:12px 0;
+  font-size:18px;
+}
+
+.offer li::before{
+  content:"✓";
+  color:#d7ff4f;
+  font-weight:bold;
+  margin-right:10px;
+}
+
+.bonus{
+  background:#fffbea;
+}
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+details{
+  background:white;
+  margin-bottom:12px;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,.05);
+}
+
+summary{
+  cursor:pointer;
+  font-weight:bold;
+  font-size:18px;
+  color:#0b3d2e;
+}
+
+.guarantee{
+  text-align:center;
+  background:#e9f6ef;
+}
+
+.guarantee-box{
+  max-width:800px;
+  margin:auto;
+  background:white;
+  padding:35px;
+  border-radius:18px;
+}
+
+.disclaimer{
+  font-size:13px;
+  color:#667078;
+  max-width:850px;
+  margin:30px auto 0;
+  text-align:center;
+}
+
+footer{
+  background:#071f18;
+  color:#bfcac6;
+  text-align:center;
+  padding:35px 20px;
+  font-size:14px;
+}
+
+@media(max-width:800px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding:55px 18px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  section{
+    padding:48px 18px;
+  }
+
+  .section-title{
+    font-size:30px;
+  }
+
+  .price{
+    font-size:46px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="container">
+
+    <span class="badge">MÉTODO FINANCEIRO 3-2-1</span>
+
+    <h1>Você não precisa resolver todas as suas dívidas hoje. Precisa de um plano.</h1>
+
+    <p>
+      Um método simples e prático para organizar suas finanças,
+      negociar suas dívidas e criar uma rotina para acelerar sua quitação.
+    </p>
+
+    <a class="cta" href="https://pay.kiwify.com.br/8mknN2V">
+      QUERO ACESSAR O MÉTODO 3-2-1
+    </a>
+
+  </div>
+</header>
+
+<section>
+  <div class="container">
+
+    <h2 class="section-title">O que é o Método 3-2-1?</h2>
+
+    <p class="section-subtitle">
+      Um plano estruturado para transformar a desorganização financeira
+      em uma rotina de acompanhamento e ação.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="number">3</div>
+        <h3>Passos</h3>
+        <p>
+          Reorganizar suas finanças, negociar suas dívidas
+          e automatizar sua quitação.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">2</div>
+        <h3>Regras</h3>
+        <p>
+          Evitar novas dívidas e direcionar o dinheiro economizado
+          para acelerar sua organização financeira.
+        </p>
+      </div>
+
+      <div class="card highlight">
+        <div class="number">1</div>
+        <h3>Ritual semanal</h3>
+        <p>
+          Reserve cerca de 20 minutos por semana para revisar
+          gastos, contas e evolução das suas dívidas.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="formats">
+  <div class="container">
+
+    <h2 class="section-title">Você recebe o método em 3 formatos</h2>
+
+    <p class="section-subtitle">
+      Escolha a forma que combina melhor com sua rotina.
+    </p>
+
+    <div class="grid">
+
+      <div class="card format">
+        <h3>🎥 Videoaula</h3>
+        <p>
+          Entenda a proposta do Método Financeiro 3-2-1
+          de forma simples e objetiva.
+        </p>
+      </div>
+
+      <div class="card format">
+        <h3>📘 E-book em PDF</h3>
+        <p>
+          Tenha o conteúdo completo para consultar
+          quando precisar.
+        </p>
+      </div>
+
+      <div class="card format">
+        <h3>🧩 E-book interativo</h3>
+        <p>
+          Avance pelas etapas e teste seus conhecimentos
+          com quizzes ao longo do método.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="steps">
+  <div class="container">
+
+    <h2 class="section-title">O que você vai aprender</h2>
+
+    <p class="section-subtitle">
+      Um caminho organizado para começar a colocar suas finanças em ordem.
+    </p>
+
+    <div class="step">
+      <div class="step-number">1</div>
+      <div>
+        <h3>Entenda o ciclo da dívida</h3>
+        <p>
+          Identifique padrões que podem estar dificultando
+          sua organização financeira.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <div>
+        <h3>Faça seu raio-X financeiro</h3>
+        <p>
+          Organize suas receitas, despesas, contas e dívidas
+          para enxergar sua situação atual.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <div>
+        <h3>Reorganize suas finanças em 7 dias</h3>
+        <p>
+          Faça cortes, organize seus gastos e estabeleça
+          uma meta financeira.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">4</div>
+      <div>
+        <h3>Negocie suas dívidas</h3>
+        <p>
+          Aprenda a estruturar sua negociação e evitar
+          novas armadilhas financeiras.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">5</div>
+      <div>
+        <h3>Automatize sua organização</h3>
+        <p>
+          Crie uma rotina para pagamentos, acompanhamento
+          e evolução da sua quitação.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">6</div>
+      <div>
+        <h3>Monte seu plano de 12 meses</h3>
+        <p>
+          Transforme o método em um plano de acompanhamento
+          para os próximos meses.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <h2 class="section-title">Um método para sair da improvisação</h2>
+
+    <p class="section-subtitle">
+      Você não precisa fazer tudo de uma vez.
+      Precisa saber qual é o próximo passo.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Organize</h3>
+        <p>
+          Descubra exatamente para onde seu dinheiro está indo
+          e tenha uma visão mais clara das suas finanças.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Negocie</h3>
+        <p>
+          Estruture suas prioridades e prepare-se para negociar
+          suas dívidas com mais organização.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Automatize</h3>
+        <p>
+          Crie mecanismos simples para manter sua rotina
+          financeira funcionando.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="bonus">
+  <div class="container">
+
+    <h2 class="section-title">🎁 Bônus exclusivo</h2>
+
+    <p class="section-subtitle">
+      Além do método, você recebe material complementar
+      para ajudar na sua organização.
+    </p>
+
+    <div class="card" style="max-width:700px;margin:auto;text-align:center;">
+      <h3>Checklist do Raio-X Financeiro</h3>
+
+      <p>
+        Um material para ajudar você a levantar suas informações,
+        organizar suas dívidas e definir seus próximos passos.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="offer">
+
+  <div class="container">
+
+    <h2 class="section-title" style="color:white;">
+      Comece seu plano hoje
+    </h2>
+
+    <p>
+      Acesso ao Método Financeiro 3-2-1 e aos materiais disponíveis.
+    </p>
+
+    <div class="price">R$ 27,00</div>
+
+    <ul>
+      <li>Método Financeiro 3-2-1</li>
+      <li>E-book em PDF</li>
+      <li>E-book interativo</li>
+      <li>Videoaula</li>
+      <li>Quizzes de acompanhamento</li>
+      <li>Checklist bônus</li>
+      <li>Acesso pela Área de Membros</li>
+    </ul>
+
+    <a class="cta" href="https://pay.kiwify.com.br/8mknN2V">
+      QUERO COMEÇAR AGORA
+    </a>
+
+    <p class="disclaimer" style="color:#cbd7d2;">
+      O Método Financeiro 3-2-1 possui caráter educacional e de organização
+      financeira. Os resultados dependem das decisões e condições individuais
+      de cada pessoa. Não há garantia de quitação de dívidas, redução de juros,
+      aprovação de crédito ou resultado financeiro específico.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="guarantee">
+
+  <div class="container">
+
+    <div class="guarantee-box">
+
+      <h2 class="section-title">Seu acesso é simples</h2>
+
+      <p>
+        Após a confirmação da compra, você recebe acesso ao conteúdo
+        pela Área de Membros da Kiwify.
+      </p>
+
+      <p style="margin-top:15px;">
+        Você poderá acompanhar as aulas, acessar o e-book,
+        realizar os quizzes e utilizar os materiais disponíveis.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="container">
+
+    <h2 class="section-title">Perguntas frequentes</h2>
+
+    <div class="faq">
+
+      <details>
+        <summary>O que é o Método Financeiro 3-2-1?</summary>
+        <p>
+          É um método de organização financeira estruturado em
+          3 passos, 2 regras e 1 ritual semanal.
+        </p>
+      </details>
+
+      <details>
+        <summary>Como recebo o acesso?</summary>
+        <p>
+          O acesso é disponibilizado pela Área de Membros da Kiwify
+          após a confirmação da compra.
+        </p>
+      </details>
+
+      <details>
+        <summary>Posso acessar pelo celular?</summary>
+        <p>
+          Sim. O conteúdo pode ser acessado por dispositivos
+          compatíveis com a Área de Membros.
+        </p>
+      </details>
+
+      <details>
+        <summary>Preciso entender de finanças?</summary>
+        <p>
+          Não. O conteúdo foi estruturado para apresentar
+          os conceitos de maneira prática e organizada.
+        </p>
+      </details>
+
+      <details>
+        <summary>O método garante que vou quitar minhas dívidas?</summary>
+        <p>
+          Não. O conteúdo é educacional e oferece uma estrutura
+          de organização. Os resultados dependem das condições
+          e decisões individuais de cada pessoa.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 Método Financeiro 3-2-1
+  </p>
+
+  <p style="margin-top:8px;">
+    Conteúdo educacional sobre organização financeira.
+  </p>
+
+</footer>
+
+</body>
+</html>
