@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estratégia 3-2-1 — O Plano para Sair das Dívidas</title>
+<meta name="description" content="Um plano de 12 meses para organizar suas finanças, estruturar negociações e criar uma rotina de acompanhamento das dívidas.">
+<style>
+:root{
+ --dark:#071b18;--dark2:#0d2a25;--green:#b7f34a;--green2:#eaffbf;
+ --cream:#fff8df;--gold:#e7bc52;--bg:#f6f8f7;--white:#fff;
+ --text:#10201d;--muted:#61716c;--line:#dfe8e4;--red:#b64b42;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none}
+.container{width:min(1120px,calc(100% - 36px));margin:auto}
+.timerbar{position:sticky;top:0;z-index:20;background:#071b18;color:#fff;padding:9px 12px;text-align:center;font-size:14px;font-weight:800;box-shadow:0 3px 15px rgba(0,0,0,.18)}
+.timer{display:inline-flex;align-items:center;gap:9px;margin-left:8px;color:var(--green);font-size:20px;font-variant-numeric:tabular-nums}
+.hero{background:radial-gradient(circle at 80% 15%,#1a4a40 0,#0d2a25 35%,#071b18 72%);color:white;padding:30px 0 82px;overflow:hidden}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;font-weight:900}
+.logo{font-size:18px;letter-spacing:.5px}
+.topbar a{color:white;font-size:14px}
+.heroGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}
+.tag{display:inline-block;background:var(--green);color:#10201d;padding:8px 14px;border-radius:99px;font-size:13px;font-weight:900;margin-bottom:20px}
+h1{font-size:clamp(40px,6vw,70px);line-height:.98;letter-spacing:-3px;margin:0 0 22px}
+h1 em{color:var(--green);font-style:normal}
+.lead{font-size:20px;color:#dbe7e3;max-width:690px}
+.cta{display:inline-block;background:var(--green);color:#10201d;font-weight:950;padding:17px 27px;border-radius:12px;margin-top:18px;font-size:17px;box-shadow:0 14px 35px rgba(183,243,74,.18)}
+.micro{font-size:12px;color:#a9bab5;margin-top:12px}
+.visual{background:#fff;color:var(--text);border-radius:24px;padding:18px;box-shadow:0 25px 70px rgba(0,0,0,.28);transform:rotate(1deg)}
+.visualTop{background:linear-gradient(145deg,#102f29,#071b18);border-radius:18px;padding:30px;color:#fff}
+.visualNumber{font-size:74px;font-weight:950;color:var(--green);line-height:1}
+.visualTop h2{font-size:30px;line-height:1.05;margin:12px 0}
+.visualTop p{color:#cbdad6}
+.visualBottom{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.visualItem{padding:12px;background:#eef5f2;border-radius:10px;text-align:center;font-weight:900;font-size:12px}
+.visualNote{margin:12px 4px 0;text-align:center;color:#66736f;font-size:12px}
+section{padding:76px 0}
+.sectionHead{text-align:center;max-width:820px;margin:0 auto 42px}
+.sectionHead h2{font-size:clamp(31px,4vw,44px);line-height:1.08;letter-spacing:-1.4px;margin:0 0 13px}
+.sectionHead p{color:var(--muted);font-size:17px;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:27px;box-shadow:0 8px 25px rgba(16,32,29,.045)}
+.card .icon{font-size:32px}.card h3{margin:10px 0 8px;font-size:21px}.card p{margin:0;color:var(--muted)}
+.objections{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:900px;margin:auto}
+.objection{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px 20px;font-weight:750}
+.objection span{color:#638b25;margin-right:8px}
+.darkSection{background:var(--dark);color:white}.darkSection .sectionHead p{color:#b9cac5}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:#10342d;border:1px solid #245248;border-radius:20px;padding:30px}
+.stepNum{width:52px;height:52px;border-radius:50%;background:var(--green);color:#10201d;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:950}
+.step h3{font-size:24px;margin:16px 0 8px}.step p{color:#c7d7d2}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.listCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px}
+.list{list-style:none;margin:0;padding:0}.list li{padding:12px 0;border-bottom:1px solid var(--line)}.list li:last-child{border:0}
+.list li:before{content:"✓";font-weight:950;color:#4c8c24;margin-right:10px}
+.curiosity{background:#eef5f2;border-left:5px solid #77a934;border-radius:12px;padding:20px 22px;margin-top:22px}
+.bonus{background:linear-gradient(135deg,#fff9e5,#fff);border:2px solid var(--gold)}
+.bonusLabel{color:#8c6819;font-weight:950;font-size:13px;letter-spacing:.6px}
+.value{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.valueBox{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px}
+.valueBox strong{font-size:28px}
+.total{background:var(--dark);color:#fff;border-radius:20px;padding:30px;text-align:center}
+.total .big{font-size:46px;font-weight:950;color:var(--green)}
+.bumpGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.bump{position:relative}.bumpNo{display:inline-block;background:#eaf4e3;color:#426e27;font-weight:900;padding:5px 9px;border-radius:7px;font-size:12px}
+.proof{background:#fff;border:2px dashed #b9c8c3;border-radius:18px;padding:30px;text-align:center;max-width:900px;margin:auto}
+.proof strong{font-size:22px}
+.guarantee{background:linear-gradient(135deg,#eef8df,#fff);border:2px solid #a8ce6e;border-radius:20px;padding:32px;text-align:center;max-width:900px;margin:auto}
+.guarantee .seal{font-size:44px}
+.offer{background:linear-gradient(135deg,var(--dark),var(--dark2));color:#fff;border-radius:26px;padding:50px 30px;text-align:center;max-width:820px;margin:auto}
+.offer h2{font-size:38px;margin:8px 0}.price{font-size:62px;font-weight:950;color:var(--green);line-height:1.1;margin:8px 0}.offer p{color:#d3dfdc}
+.offer .cta{min-width:280px}.secure{font-size:12px;color:#9fb1ac;margin-top:15px}
+.faq{max-width:850px;margin:auto}details{background:#fff;border:1px solid var(--line);border-radius:13px;margin:11px 0;padding:17px 19px}summary{font-weight:900;cursor:pointer}
+.authority{background:#071b18;color:#fff}
+.authorityGrid{display:grid;grid-template-columns:160px 1fr;gap:30px;align-items:center;max-width:900px;margin:auto}
+.avatar{width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 50% 35%,#dfe9e5 0 20%,transparent 21%),linear-gradient(145deg,#b7f34a,#2d6658);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;font-size:64px}
+.authority h2{margin:0 0 10px;font-size:34px}
+.authority p{color:#c8d8d3;margin:8px 0}
+.final{background:var(--green2);text-align:center}
+.final h2{font-size:42px;line-height:1.05;margin:0 0 12px}
+.disclaimer{max-width:850px;margin:25px auto 0;text-align:center;color:#6c7774;font-size:12px}
+footer{background:#051411;color:#9eafaa;text-align:center;padding:30px 20px;font-size:13px}
+@media(max-width:820px){
+ .heroGrid,.two,.value,.authorityGrid{grid-template-columns:1fr}
+ .cards,.steps,.bumpGrid,.objections{grid-template-columns:1fr}
+ .topbar{margin-bottom:35px}.visual{transform:none}.hero{padding-bottom:55px}
+ h1{letter-spacing:-2px}.authority{text-align:center}.avatar{margin:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="timerbar">
+  Seu primeiro passo pode começar agora:
+  <span class="timer" id="timer">15:00</span>
+</div>
+
+<header class="hero">
+ <div class="container">
+  <div class="topbar">
+   <div class="logo">ESTRATÉGIA 3-2-1</div>
+   <a href="#comprar">VER A OFERTA</a>
+  </div>
+  <div class="heroGrid">
+   <div>
+    <span class="tag">PLANO PRÁTICO • 12 MESES</span>
+    <h1>Você não precisa resolver todas as suas dívidas hoje. <em>Precisa de um plano.</em></h1>
+    <p class="lead"><strong>Estratégia 3-2-1: O Plano para Sair das Dívidas</strong> — um plano de 12 meses para organizar suas finanças, estruturar negociações e criar uma rotina de acompanhamento.</p>
+    <a class="cta" href="#comprar">QUERO CONHECER O MÉTODO →</a>
+    <div class="micro">Material digital • Pagamento único • Bônus incluído</div>
+   </div>
+   <div class="visual">
+    <div class="visualTop">
+     <div class="visualNumber">3-2-1</div>
+     <h2>O Plano para Sair das Dívidas</h2>
+     <p>Reorganizar • Negociar • Automatizar</p>
+    </div>
+    <div class="visualBottom">
+     <div class="visualItem">RAIO-X</div><div class="visualItem">NEGOCIAÇÃO</div><div class="visualItem">12 MESES</div>
+    </div>
+    <div class="visualNote">Criativo conceitual inspirado na estrutura do e-book.</div>
+   </div>
+  </div>
+ </div>
+</header>
+<section>
+ <div class="container">
+  <div class="sectionHead">
+   <h2>O material Estratégia 3-2-1 é para você que:</h2>
+   <p>Se você se reconhece em algum destes pontos, o material foi estruturado para ajudar a transformar o problema em um plano de ação.</p>
+  </div>
+  <div class="objections">
+   <div class="objection"><span>✓</span> Sabe que tem dívidas, mas evita olhar os extratos porque isso gera ansiedade.</div>
+   <div class="objection"><span>✓</span> Vive “apagando incêndios”: paga uma conta e outra acaba estourando.</div>
+   <div class="objection"><span>✓</span> Já tentou cortar gastos, mas não conseguiu transformar isso em uma rotina.</div>
+   <div class="objection"><span>✓</span> Espera uma renda extra, aumento ou dinheiro inesperado para começar.</div>
+   <div class="objection"><span>✓</span> Não sabe quais dívidas priorizar nem como se preparar para negociar.</div>
+   <div class="objection"><span>✓</span> Precisa de um acompanhamento simples para não deixar o plano apenas no papel.</div>
+  </div>
+ </div>
+</section>
+
+<section class="darkSection">
+ <div class="container">
+  <div class="sectionHead">
+   <h2>A lógica é simples: 3 passos, 2 regras e 1 ritual</h2>
+   <p>O e-book organiza a jornada em uma sequência: primeiro você enxerga e reorganiza; depois negocia; por fim, automatiza e acompanha.</p>
+  </div>
+  <div class="steps">
+   <div class="step"><div class="stepNum">3</div><h3>REORGANIZAR</h3><p>Faça o raio-X financeiro, identifique vazamentos, organize receitas, despesas e dívidas e defina prioridades.</p></div>
+   <div class="step"><div class="stepNum">2</div><h3>NEGOCIAR</h3><p>Prepare seu limite de pagamento, use um roteiro de conversa e busque condições que façam sentido para sua realidade.</p></div>
+   <div class="step"><div class="stepNum">1</div><h3>AUTOMATIZAR</h3><p>Configure pagamentos e transferências programadas e acompanhe a evolução para manter o sistema funcionando.</p></div>
+  </div>
+  <div class="curiosity" style="background:#10342d;color:#fff;border-left-color:#b7f34a">
+   <strong>O detalhe que faz a engrenagem funcionar:</strong> o material também apresenta duas regras de ouro e um ritual semanal de 20 minutos para revisar gastos, saldo e progresso das dívidas.
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="sectionHead">
+   <h2>Com a Estratégia 3-2-1, você vai aprender:</h2>
+   <p>Pequenas ações que transformam uma situação confusa em tarefas concretas.</p>
+  </div>
+  <div class="cards">
+   <div class="card"><div class="icon">🔎</div><h3>Fazer seu Raio-X Financeiro</h3><p>Listar entradas e saídas e separar gastos em categorias para enxergar onde o dinheiro está indo.</p></div>
+   <div class="card"><div class="icon">✂️</div><h3>Encontrar cortes possíveis</h3><p>Revisar assinaturas, delivery, compras por impulso, planos e outros gastos que podem ser ajustados.</p></div>
+   <div class="card"><div class="icon">📦</div><h3>Separar antes de gastar</h3><p>Usar o conceito de envelope digital com conta principal, conta de dívidas e conta de emergência.</p></div>
+   <div class="card"><div class="icon">💬</div><h3>Chegar preparado à negociação</h3><p>Definir seu limite, pedir melhores condições e registrar propostas e protocolos.</p></div>
+   <div class="card"><div class="icon">📅</div><h3>Organizar os próximos 12 meses</h3><p>Seguir um checklist mês a mês, com ações de diagnóstico, negociação, automação e revisão.</p></div>
+   <div class="card"><div class="icon">🔁</div><h3>Manter o plano em movimento</h3><p>Usar o ritual semanal e o acompanhamento mensal para corrigir a rota sem abandonar o processo.</p></div>
+  </div>
+ </div>
+</section>
+
+<section style="background:#eef5f2">
+ <div class="container">
+  <div class="sectionHead">
+   <h2>O que existe por dentro do material</h2>
+   <p>Alguns dos pontos mais importantes que você vai encontrar nos capítulos.</p>
+  </div>
+  <div class="two">
+   <div class="listCard">
+    <h3>01. O ciclo da dívida</h3>
+    <ul class="list">
+     <li>Os padrões que podem manter a dívida viva</li>
+     <li>O “erro invisível” dos pequenos vazamentos</li>
+     <li>Por que força de vontade sozinha não basta</li>
+    </ul>
+   </div>
+   <div class="listCard">
+    <h3>02. O Mapa 3-2-1</h3>
+    <ul class="list">
+     <li>Os 3 passos e a ordem entre eles</li>
+     <li>As 2 regras de ouro</li>
+     <li>O ritual semanal de 20 minutos</li>
+    </ul>
+   </div>
+   <div class="listCard">
+    <h3>03. Reorganização em 7 dias</h3>
+    <ul class="list">
+     <li>Raio-X financeiro</li>
+     <li>Cinco categorias de corte</li>
+     <li>Envelope digital e meta semanal</li>
+    </ul>
+   </div>
+   <div class="listCard">
+    <h3>04. Negociação sem novas armadilhas</h3>
+    <ul class="list">
+     <li>Roteiro do que dizer e evitar</li>
+     <li>Como definir seu limite de pagamento</li>
+     <li>Como organizar uma ordem de ataque</li>
+    </ul>
+   </div>
+   <div class="listCard">
+    <h3>05. Automação e acompanhamento</h3>
+    <ul class="list">
+     <li>Pagamentos e transferências programadas</li>
+     <li>Regra dos 10% para dinheiro extra</li>
+     <li>Acompanhamento mensal sem burocracia</li>
+    </ul>
+   </div>
+   <div class="listCard">
+    <h3>06. Plano de 12 meses</h3>
+    <ul class="list">
+     <li>Checklist mês a mês</li>
+     <li>Plano para imprevistos</li>
+     <li>Primeira ação para começar em 15 minutos</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="sectionHead">
+   <h2>🎁 E você ainda recebe um bônus</h2>
+   <p>Comece pelo diagnóstico antes de tentar organizar todo o restante.</p>
+  </div>
+  <div class="listCard bonus">
+   <div class="bonusLabel">BÔNUS GRATUITO</div>
+   <h3>Checklist do Raio-X Financeiro: Diagnóstico Completo em 1 Tarde</h3>
+   <p>Um material complementar para mapear suas dívidas, calcular juros e prazos e organizar as informações necessárias para definir os próximos passos.</p>
+   <ul class="list">
+    <li>Mapeamento de todas as dívidas</li>
+    <li>Organização de juros e prazos</li>
+    <li>Diagnóstico da situação financeira</li>
+    <li>Próximos passos depois do Raio-X</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="sectionHead">
+   <h2>Uma decisão de cada vez: veja como o plano avança</h2>
+   <p>O material apresenta uma sequência de ações ao longo de 12 meses, sem depender de uma única mudança radical.</p>
+  </div>
+  <div class="two">
+   <div class="listCard">
+    <h3>Primeiros meses</h3>
+    <ul class="list">
+     <li>Mês 1: diagnóstico completo, enxugamento e valor mensal</li>
+     <li>Mês 2: primeiras negociações</li>
+     <li>Mês 3: automatização dos pagamentos</li>
+     <li>Mês 4: revisão do orçamento</li>
+     <li>Mês 5: ataque à terceira dívida</li>
+     <li>Mês 6: pausa estratégica e ajustes</li>
+    </ul>
+   </div>
+   <div class="listCard">
+    <h3>Segunda metade</h3>
+    <ul class="list">
+     <li>Mês 7: novas negociações</li>
+     <li>Mês 8: manutenção do sistema automático</li>
+     <li>Mês 9: antecipação de parcelas quando possível</li>
+     <li>Mês 10: revisão da reserva de emergência</li>
+     <li>Mês 11: aceleração da última dívida</li>
+     <li>Mês 12: fechamento do ciclo e balanço</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+
+<section>
+ <div class="container">
+  <div class="sectionHead">
+   <h2>Quanto você recebe por R$ 27,00?</h2>
+   <p>A oferta principal é o e-book + o bônus. Os materiais adicionais podem aparecer como Order Bumps pagos e opcionais no checkout.</p>
+  </div>
+  <div class="value">
+   <div class="valueBox">
+    <h3>📘 Produto principal</h3>
+    <p><strong>Estratégia 3-2-1</strong></p>
+    <p>Plano de 12 meses, reorganização em 7 dias, negociação, automação, acompanhamento e plano para imprevistos.</p>
+    <p><strong>Valor: R$ 27,00</strong></p>
+   </div>
+   <div class="valueBox">
+    <h3>🎁 Bônus incluído</h3>
+    <p><strong>Checklist do Raio-X Financeiro</strong></p>
+    <p>Diagnóstico em uma tarde para mapear dívidas, juros e prazos.</p>
+    <p><strong>Incluído gratuitamente</strong></p>
+   </div>
+  </div>
+  <div class="total" style="margin-top:20px">
+   <div>OFERTA PRINCIPAL</div>
+   <div class="big">R$ 27,00</div>
+   <div>Pagamento único • Bônus incluído</div>
+  </div>
+ </div>
+</section>
+
+<section style="background:#eef5f2">
+ <div class="container">
+  <div class="sectionHead">
+   <h2>Se quiser ir além, estes materiais são opcionais</h2>
+   <p>Os 5 Order Bumps não fazem parte do preço de R$ 27,00. Eles podem ser adicionados separadamente no checkout.</p>
+  </div>
+  <div class="bumpGrid">
+   <div class="card bump"><span class="bumpNo">ORDER BUMP • R$ 19,90</span><h3>Scripts de Negociação</h3><p>E-mails e mensagens prontas para usar como base em conversas com bancos e credores.</p></div>
+   <div class="card bump"><span class="bumpNo">ORDER BUMP • R$ 14,90</span><h3>Diário de Quitação</h3><p>Modelo para acompanhar pagamentos, evolução, economia de juros e metas.</p></div>
+   <div class="card bump"><span class="bumpNo">ORDER BUMP • R$ 14,90</span><h3>Plano de Emergência</h3><p>Material complementar para organizar respostas a imprevistos sem abandonar o planejamento.</p></div>
+   <div class="card bump"><span class="bumpNo">ORDER BUMP • R$ 9,90</span><h3>Checklist do Sistema Automático</h3><p>Checklist para configurar uma rotina de pagamentos e reduzir esquecimentos.</p></div>
+   <div class="card bump"><span class="bumpNo">ORDER BUMP • R$ 9,90</span><h3>Mini-Guia da Regra dos 10%</h3><p>Material complementar sobre como direcionar 90% de um dinheiro extra para a dívida prioritária e manter 10% com você.</p></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="guarantee">
+   <div class="seal">🛡️</div>
+   <h2>Garantia de 7 dias</h2>
+   <p>Se você comprar e perceber, dentro do prazo de garantia configurado na oferta, que o material não é para você, poderá solicitar o reembolso conforme as regras da plataforma.</p>
+   <p style="font-size:13px;color:#61716c"><strong>Antes de publicar:</strong> confirme na Kiwify que a oferta está configurada com 7 dias de garantia e mantenha esta informação igual no checkout.</p>
+  </div>
+ </div>
+</section>
+
+<section id="comprar">
+ <div class="container">
+  <div class="offer">
+   <span class="tag">ACESSO DIGITAL</span>
+   <h2>Estratégia 3-2-1</h2>
+   <p>O plano para organizar suas finanças, estruturar suas dívidas e criar uma rotina de acompanhamento.</p>
+   <div class="price">R$ 27,00</div>
+   <p>Pagamento único • Bônus incluído</p>
+   <!-- Checkout Kiwify configurado -->
+   <a class="cta" href="https://pay.kiwify.com.br/8mknN2V" target="_blank" rel="noopener">QUERO COMEÇAR AGORA →</a>
+   <div class="secure">Pagamento e entrega devem seguir a configuração oficial do seu produto na Kiwify.</div>
+  </div>
+  <p class="disclaimer">Este material tem finalidade educacional e de organização financeira. Ele não garante quitação de dívidas, redução de juros, aprovação de negociações ou resultados específicos. Os resultados dependem da situação individual, dos credores e da execução do planejamento.</p>
+ </div>
+</section>
+
+
+
+<section>
+ <div class="container">
+  <div class="sectionHead">
+   <span class="tag">3 FORMAS DE ACESSAR</span>
+   <h2>Você escolhe como aprender</h2>
+   <p>O Método Financeiro 3-2-1 está disponível em três formatos para você acompanhar o conteúdo da maneira que preferir.</p>
+  </div>
+  <div class="cards">
+   <div class="card"><div class="icon">🎥</div><h3>Videoaulas</h3><p>Aulas em vídeo para acompanhar o método de forma prática e didática.</p></div>
+   <div class="card"><div class="icon">📘</div><h3>E-book em PDF</h3><p>Material completo em PDF para ler, consultar e revisar quando quiser.</p></div>
+   <div class="card"><div class="icon">🧩</div><h3>E-book interativo</h3><p>Versão interativa com quizzes de perguntas e respostas para testar o que você aprendeu.</p></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="sectionHead"><h2>Perguntas frequentes</h2></div>
+  <div class="faq">
+   <details><summary>Como recebo o e-book?</summary><p>Após a confirmação do pagamento, o acesso será disponibilizado conforme a configuração de entrega do produto na plataforma.</p></details>
+   <details><summary>O pagamento é único?</summary><p>Sim. A oferta principal apresentada nesta página é de R$ 27,00 em pagamento único.</p></details>
+   <details><summary>O bônus está incluído?</summary><p>Sim. O Checklist do Raio-X Financeiro é o bônus gratuito da oferta principal.</p></details>
+   <details><summary>Os 5 materiais adicionais estão incluídos nos R$ 27,00?</summary><p>Não. Eles são opcionais e podem ser adicionados separadamente como Order Bumps no checkout.</p></details>
+   <details><summary>Preciso ter conhecimento de finanças?</summary><p>Não. O material foi organizado em etapas práticas de diagnóstico, reorganização, negociação, automação e acompanhamento.</p></details>
+   <details><summary>O método garante que minhas dívidas serão quitadas em 12 meses?</summary><p>Não. Os 12 meses são a estrutura de planejamento apresentada no e-book. O resultado depende dos valores das dívidas, renda, juros, condições de negociação e execução do plano.</p></details>
+   <details><summary>O que acontece se surgir um imprevisto?</summary><p>O material apresenta um plano de emergência: priorizar o essencial, ajustar temporariamente o ataque às dívidas, evitar criar nova dívida e retomar o plano quando possível.</p></details>
+   <details><summary>Existe suporte?</summary><p>O suporte e o canal de atendimento devem ser informados de acordo com a configuração da sua oferta na Kiwify. Não coloque um canal que você ainda não disponibilizou.</p></details>
+  </div>
+ </div>
+</section>
+
+<!-- PENÚLTIMO BLOCO: AUTORIDADE -->
+<section class="authority">
+ <div class="container">
+  <div class="authorityGrid">
+   <div class="avatar" aria-label="Imagem conceitual de planejamento financeiro">📊</div>
+   <div>
+    <h2>Uma metodologia apresentada de forma simples e prática</h2>
+    <p>O material foi estruturado para transformar organização financeira em uma sequência de ações: diagnóstico, reorganização, negociação, automação e acompanhamento.</p>
+    <p><strong>Posicionamento:</strong> conteúdo educacional focado em organização e execução do planejamento financeiro pessoal.</p>
+    <p style="font-size:13px">A imagem acima é uma identidade visual conceitual da marca, não uma foto de uma pessoa real ou de um especialista.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="final">
+ <div class="container">
+  <h2>Você não precisa resolver tudo hoje.</h2>
+  <p>Precisa apenas começar pelo próximo passo.</p>
+  <a class="cta" href="#comprar">QUERO COMEÇAR AGORA →</a>
+ </div>
+</section>
+
+<footer>
+ Estratégia 3-2-1 — O Plano para Sair das Dívidas<br>
+ Material digital para organização financeira.
+</footer>
+
+<script>
+(function(){
+  let seconds = 15 * 60;
+  const el = document.getElementById('timer');
+  const tick = () => {
+    const m = String(Math.floor(seconds / 60)).padStart(2,'0');
+    const s = String(seconds % 60).padStart(2,'0');
+    el.textContent = m + ':' + s;
+    if(seconds > 0) seconds--;
+  };
+  tick();
+  setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
